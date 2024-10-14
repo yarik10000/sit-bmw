@@ -1,0 +1,584 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> BMW</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: #fff;
+            border-radius: 5px;
+        }
+        .characteristics {
+            border: 2px solid #000;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #000;
+            color: #fff;
+            position: relative;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .model-select {
+            margin: 20px 0;
+        }
+        .model-details {
+            display: none;
+        }
+    </style>
+    <script>
+        function showModel(model) {
+            const models = document.querySelectorAll('.model-details');
+            models.forEach(m => m.style.display = 'none');
+            if (model) {
+                document.getElementById(model).style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>BMW</h1>
+    <nav>
+        <a href="#models">Моделі</a>
+        <a href="#characteristics">Характеристики</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#contact">Контакти</a>
+    </nav>
+</header>
+
+<section id="models">
+    <h2>Виберіть модель BMW</h2>
+    <div class="model-select">
+        <select onchange="showModel(this.value)">
+            <option value="">-- Оберіть модель --</option>
+            <option value="m3">BMW M3 GTR</option>
+            <option value="m8">BMW M8 Competition</option>
+            <option value="f90">BMW F90 Competition</option>
+        </select>
+    </div>
+
+    <div id="m3" class="model-details">
+        <h3>BMW M3 GTR</h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqlNr6-mw0T7yi77dnThTaYJx7eXr21FAQ8A&s" alt="BMW M3 GTR">
+        <h4>Технічні характеристики</h4>
+        <ul>
+            <li>Двигун: 4.0L V8</li>
+            <li>Потужність: ~493 к.с.</li>
+            <li>Крутний момент: ~500 Нм</li>
+            <li>Розгін 0-100 км/год: 4.1 сек</li>
+            <li>Максимальна швидкість: ~300 км/год</li>
+            <li>Витрата пального: 12-14 л/100 км</li>
+        </ul>
+    </div>
+
+    <div id="m8" class="model-details">
+        <h3>BMW M8 Competition</h3>
+        <img src="https://www.bmw.ua/content/dam/bmw/common/all-models/m-series/m8-gran-coupe/2022/navigation/bmw-m8-competition-gran-coupe-modelfinder.png" alt="BMW M8 Competition">
+        <h4>Технічні характеристики</h4>
+        <ul>
+            <li>Двигун: V8 TwinPower Turbo</li>
+            <li>Потужність: 600 к.с.</li>
+            <li>Крутний момент: 750 Нм</li>
+            <li>Розгін 0-100 км/год: 3.0 сек</li>
+            <li>Максимальна швидкість: 305 км/год</li>
+            <li>Витрата пального: 10.5/7.5 л/100 км</li>
+        </ul>
+    </div>
+
+    <div id="f90" class="model-details">
+        <h3>BMW F90 Competition</h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8u12YcX9d4xwxIbFei8kV8kTv8h-oH0hcZw&s" alt="BMW F90 Competition">
+        <h4>Технічні характеристики</h4>
+        <ul>
+            <li>Двигун: V8 TwinPower Turbo</li>
+            <li>Потужність: 600 к.с.</li>
+            <li>Крутний момент: 750 Нм</li>
+            <li>Розгін 0-100 км/год: 3.4 сек</li>
+            <li>Максимальна швидкість: 305 км/год</li>
+            <li>Витрата пального: 10.5/7.5 л/100 км</li>
+        </ul>
+    </div>
+</section>
+
+<section id="characteristics" class="characteristics">
+    <h2>Характеристики</h2>
+    <p>Тут можна додати загальні характеристики автомобілів або інші цікаві факти.</p>
+</section>
+
+<section id="gallery" class="gallery">
+    <h2>Галерея</h2>
+    <a href="#characteristics">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8u12YcX9d4xwxIbFei8kV8kTv8h-oH0hcZw&s" alt="BMW">
+    </a>
+    <a href="#characteristics">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqlNr6-mw0T7yi77dnThTaYJx7eXr21FAQ8A&s" alt="BMW  ">
+    </a>
+    <a href="#characteristics">
+        <img src="https://www.bmw.ua/content/dam/bmw/common/all-models/m-series/m8-gran-coupe/2022/navigation/bmw-m8-competition-gran-coupe-modelfinder.png"" alt="BMW ">
+    
+    </a>
+</section>
+
+<section id="contact">
+    <h2>Контакти</h2>
+    <p>Aндреса вулиця Зв'язківців, 1а, Луцьк, Волинська область, 43000</p>
+    <p>Телефон: 068 727 3135</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 BMW. Всі права захищені.</p>
+</footer>
+
+</body>
+</html><ht
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: #fff;
+            border-radius: 5px;
+        }
+        .characteristics {
+            border: 2px solid #000;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #000;
+            color: #fff;
+            position: relative;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .model-select {
+            margin: 20px 0;
+        }
+        .model-details {
+            display: none;
+        }
+    </style>
+    <script>
+        function showModel(model) {
+            const models = document.querySelectorAll('.model-details');
+            models.forEach(m => m.style.display = 'none');
+            if (model) {
+                document.getElementById(model).style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>BMW</h1>
+    <nav>
+        <a href="#models">Моделі</a>
+        <a href="#characteristics">Характеристики</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#contact">Контакти</a>
+    </nav>
+</header>
+
+<section id="models">
+    <h2>Виберіть модель BMW</h2>
+    <div class="model-select">
+        <select onchange="showModel(this.value)">
+            <option value="">-- Оберіть модель --</option>
+            <option value="m3">BMW M3 GTR</option>
+            <option value="m8">BMW M8 Competition</option>
+            <option value="f90">BMW F90 Competition</option>
+        </select>
+    </div>
+
+    <div id="m3" class="model-details">
+        <h3>BMW M3 GTR</h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqlNr6-mw0T7yi77dnThTaYJx7eXr21FAQ8A&s" alt="BMW M3 GTR">
+        <h4>Технічні характеристики</h4>
+        <ul>
+            <li>Двигун: 4.0L V8</li>
+            <li>Потужність: ~493 к.с.</li>
+            <li>Крутний момент: ~500 Нм</li>
+            <li>Розгін 0-100 км/год: 4.1 сек</li>
+            <li>Максимальна швидкість: ~300 км/год</li>
+            <li>Витрата пального: 12-14 л/100 км</li>
+        </ul>
+    </div>
+
+    <div id="m8" class="model-details">
+        <h3>BMW M8 Competition</h3>
+        <img src="https://www.bmw.ua/content/dam/bmw/common/all-models/m-series/m8-gran-coupe/2022/navigation/bmw-m8-competition-gran-coupe-modelfinder.png" alt="BMW M8 Competition">
+        <h4>Технічні характеристики</h4>
+        <ul>
+            <li>Двигун: V8 TwinPower Turbo</li>
+            <li>Потужність: 600 к.с.</li>
+            <li>Крутний момент: 750 Нм</li>
+            <li>Розгін 0-100 км/год: 3.0 сек</li>
+            <li>Максимальна швидкість: 305 км/год</li>
+            <li>Витрата пального: 10.5/7.5 л/100 км</li>
+        </ul>
+    </div>
+<div id="m8" class="model-details">
+   <h3>-BMW-3-Series-</h3>
+        <img src="https://www.topgear.com/sites/default/files/2022/09/1-BMW-3-Series.jpg" alt="BMW M3 series">
+    <div id="f90" class="model-details">
+        <ul>
+            <li>Двигун: V8 TwinPower Turbo</li>
+            <li>Потужність: 600 к.с.</li>
+            <li>Крутний момент: 750 Нм</li>
+            <li>Розгін 0-100 км/год: 3.4 сек</li>
+            <li>Максимальна швидкість: 305 км/год</li>
+            <li>Витрата пального: 10.5/7.5 л/100 км</li>
+        </ul>
+        <h3>BMW F90 Competition</h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8u12YcX9d4xwxIbFei8kV8kTv8h-oH0hcZw&s" alt="BMW F90 Competition">
+        <h4>Технічні характеристики</h4>
+        <ul>
+            <li>Двигун: V8 TwinPower Turbo</li>
+            <li>Потужність: 600 к.с.</li>
+            <li>Крутний момент: 750 Нм</li>
+            <li>Розгін 0-100 км/год: 3.4 сек</li>
+            <li>Максимальна швидкість: 305 км/год</li>
+            <li>Витрата пального: 10.5/7.5 л/100 км</li>
+        </ul>
+    </div>
+</section>
+
+<section id="characteristics" class="characteristics">
+    <h2>Характеристики</h2>
+    <p>BMW 3 Series — це поєднання комфорту, продуктивності та технологій. Основні характеристики:</p>
+    <ul>
+        <li>Двигуни: 4-циліндрові та 6-циліндрові</li>
+        <li>Потужність: 154 - 503 к.с.</li>
+        <li>Розгін до 100 км/год: 4-6 секунд</li>
+        <li>Споживання пального: від 5 до 8 л/100 км</li>
+        <li>Об'єм багажника: приблизно 480 літрів</li>
+    </ul>
+</section>
+
+<section id="gallery" class="gallery">
+    <h2>Галерея</h2>
+    <a href="#characteristics">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8u12YcX9d4xwxIbFei8kV8kTv8h-oH0hcZw&s" alt="BMW">
+    </a>
+    <a href="#characteristics">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqlNr6-mw0T7yi77dnThTaYJx7eXr21FAQ8A&s" alt="BMW 2">
+    </a>
+    <a href="#characteristics">
+        <img src="https://www.bmw.ua/content/dam/bmw/common/all-models/m-series/m8-gran-coupe/2022/navigation/bmw-m8-competition-gran-coupe-modelfinder.png" alt="BMW 3">
+   
+    </a>
+</section>
+
+<section id="contact">
+    <h2>Контакти</h2>
+    <p>Адреса: Андреса вулиця Зв'язківців, 1а, Луцьк, Волинська область, 43000</p>
+    <p>Телефон: 068 727 3135</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 BMW. Всі права захищені.</p>
+</footer>
+<httml>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: #fff;
+            border-radius: 5px;
+        }
+        .characteristics {
+            border: 2px solid #000;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #000;
+            color: #fff;
+            position: relative;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .model-select {
+            margin: 20px 0;
+        }
+        .model-details {
+            display: none;
+        }
+    </style>
+    <script>
+        function showModel(model) {
+            const models = document.querySelectorAll('.model-details');
+            models.forEach(m => m.style.display = 'none');
+            if (model) {
+                document.getElementById(model).style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>BMW</h1>
+    <nav>
+        <a href="#models">Моделі</a>
+        <a href="#characteristics">Характеристики</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#contact">Контакти</a>
+    </nav>
+</header>
+
+<section id="models">
+    <h2>Виберіть модель BMW</h2>
+    <div class="model-select">
+        <select onchange="showModel(this.value)">
+            <option value="">-- Оберіть модель --</option>
+            <option value="m3">BMW M3 GTR</option>
+            <option value="m8">BMW M8 Competition</option>
+            <option value="f90">BMW F90 Competition</option>
+            <option value="3series">BMW 3 Series</option>
+            <option value="x5">BMW X5</option> <!-- Added X5 option -->
+        </select>
+    </div>
+
+    <div id="m3" class="model-details">
+        <h3>BMW M3 GTR</h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqlNr6-mw0T7yi77dnThTaYJx7eXr21FAQ8A&s" alt="BMW M3 GTR">
+        <h4>Технічні характеристики</h4>
+        <ul>
+            <li>Двигун: 4.0L V8</li>
+            <li>Потужність: ~493 к.с.</li>
+            <li>Крутний момент: ~500 Нм</li>
+            <li>Розгін 0-100 км/год: 4.1 сек</li>
+            <li>Максимальна швидкість: ~300 км/год</li>
+            <li>Витрата пального: 12-14 л/100 км</li>
+        </ul>
+    </div>
+
+    <div id="m8" class="model-details">
+        <h3>BMW M8 Competition</h3>
+        <img src="https://www.bmw.ua/content/dam/bmw/common/all-models/m-series/m8-gran-coupe/2022/navigation/bmw-m8-competition-gran-coupe-modelfinder.png" alt="BMW M8 Competition">
+        <h4>Технічні характеристики</h4>
+        <ul>
+            <li>Двигун: V8 TwinPower Turbo</li>
+            <li>Потужність: 600 к.с.</li>
+            <li>Крутний момент: 750 Нм</li>
+            <li>Розгін 0-100 км/год: 3.0 сек</li>
+            <li>Максимальна швидкість: 305 км/год</li>
+            <li>Витрата пального: 10.5/7.5 л/100 км</li>
+        </ul>
+    </div>
+
+    <div id="f90" class="model-details">
+        <h3>BMW F90 Competition</h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8u12YcX9d4xwxIbFei8kV8kTv8h-oH0hcZw&s" alt="BMW F90 Competition">
+        <h4>Технічні характеристики</h4>
+        <ul>
+            <li>Двигун: V8 TwinPower Turbo</li>
+            <li>Потужність: 600 к.с.</li>
+            <li>Крутний момент: 750 Нм</li>
+            <li>Розгін 0-100 км/год: 3.4 сек</li>
+            <li>Максимальна швидкість: 305 км/год</li>
+            <li>Витрата пального: 10.5/7.5 л/100 км</li>
+        </ul>
+    </div>
+
+    <div id="3series" class="model-details">
+        <h3>BMW 3 Series</h3>
+        <div class="model-select">
+            <select onchange="showModel(this.value)">
+                <option value="">-- Оберіть варіант --</option>
+                <option value="320i">BMW 320i</option>
+                <option value="330i">BMW 330i</option>
+                <option value="M340i">BMW M340i</option>
+            </select>
+        </div>
+        
+        <div id="320i" class="model-details">
+            <h4>BMW 320i</h4>
+            <img src="https://www.bmw.com/content/dam/bmw/common/all-models/3-series/sedan/2022/navigation/bmw-3-series-sedan-2022-modelfinder.png" alt="BMW 320i">
+            <h4>Технічні характеристики</h4>
+            <ul>
+                <li>Двигун: 2.0L 4-циліндровий</li>
+                <li>Потужність: 154 к.с.</li>
+                <li>Крутний момент: 250 Нм</li>
+                <li>Розгін 0-100 км/год: 7.2 сек</li>
+                <li>Максимальна швидкість: 225 км/год</li>
+                <li>Витрата пального: 5.8 л/100 км</li>
+            </ul>
+        </div>
+
+        <div id="330i" class="model-details">
+            <h4>BMW 330i</h4>
+            <img src="https://www.bmw.com/content/dam/bmw/common/all-models/3-series/sedan/2022/navigation/bmw-3-series-sedan-2022-modelfinder.png" alt="BMW 330i">
+            <h4>Технічні характеристики</h4>
+            <ul>
+                <li>Двигун: 2.0L 4-циліндровий</li>
+                <li>Потужність: 258 к.с.</li>
+                <li>Крутний момент: 400 Нм</li>
+                <li>Розгін 0-100 км/год: 5.8 сек</li>
+                <li>Максимальна швидкість: 250 км/год</li>
+                <li>Витрата пального: 6.1 л/100 км</li>
+            </ul>
+        </div>
+
+        <div id="M340i" class="model-details">
+            <h4>BMW M340i</h4>
+            <img src="https://www.bmw.com/content/dam/bmw/common/all-models/3-series/sedan/2022/navigation/bmw-3-series-sedan-2022-modelfinder.png" alt="BMW M340i">
+            <h4>Технічні характеристики</h4>
+            <ul>
+                <li>Двигун: 3.0L 6-циліндровий</li>
+                <li>Потужність: 374 к.с.</li>
+                <li>Крутний момент: 500 Нм</li>
+                <li>Розгін 0-100 км/год: 4.4 сек</li>
+                <li>Максимальна швидкість: 250 км/год</li>
+                <li>Витрата пального: 7.4 л/100 км</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="x5" class="model-details"> <!-- Added BMW X5 details -->
+        <h3>BMW X5</h3>
+        <img src="https://www.bmw.com/content/dam/bmw/common/all-models/x-series/x5/2022/navigation/bmw-x5-2022-modelfinder.png" alt="BMW X5">
+        <h4>Технічні характеристики</h4>
+        <ul>
+            <li>Двигун: 3.0L 6-циліндровий</li>
+            <li>Потужність: 335 к.с.</li>
+            <li>Крутний момент: 450 Нм</li>
+            <li>Розгін 0-100 км/год: 5.3 сек</li>
+            <li>Максимальна швидкість: 250 км/год</li>
+            <li>Витрата пального: 8.5 л/100 км</li>
+        </ul>
+    </div>
+</section>
+
+<section id="characteristics" class="characteristics">
+    <h2>Характеристики</h2>
+    <p>Тут можна додати загальні характеристики автомобілів або інші цікаві факти.</p>
+</section>
+
+<section id="gallery" class="gallery">
+    <h2>Галерея</h2>
+    <a href="#characteristics">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8u12YcX9d4xwxIbFei8kV8kTv8h-oH0hcZw&s" alt="BMW Image 1">
+    </a>
+    <a href="#characteristics">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqlNr6-mw0T7yi77dnThTaYJx7eXr21FAQ8A&s" alt="BMW Image 2">
+    </a>
+    <a href="#characteristics">
+        <img src="https://www.bmw.ua/content/dam/bmw/common/all-models/m-series/m8-gran-coupe/2022/navigation/bmw-m8-competition-gran-coupe-modelfinder.png" alt="BMW Image 3">
+    </a>
+</section>
+
+<section id="contact">
+    <h2>Контакти</h2>
+    <p>Адреса: Андреса вулиця Зв'язківців, 1а, Луцьк, Волинська область, 43000</p>
+    <p>Телефон: 068 727 3135</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 BMW. Всі права захищені.</p>
+</footer>
+
+</body>
+</html>
